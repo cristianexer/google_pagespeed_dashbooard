@@ -25,3 +25,6 @@ $ yarn run test
 
 ```
 
+## Screenshot
+
+![Screenshot](./screenshot.png)
