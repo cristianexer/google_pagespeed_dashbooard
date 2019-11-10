@@ -22,10 +22,11 @@ describe('DashboardController', () => {
         }).compile();
 
         dashboardController = app.get<DashboardController>(DashboardController);
-        console.log(dashboardController);
+
     });
 
     describe('getWebsites', () => {
+        jest.setTimeout(50000);
         it('should return "JSON[]"', async () => {
             const websitesData = await dashboardController.getWebsites();
 

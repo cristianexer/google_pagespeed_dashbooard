@@ -11,7 +11,7 @@ export class GoogleService {
             baseURL: 'https://www.googleapis.com/pagespeedonline/v4',
             params: {
                 key: config.googleAPIKey,
-                strategy: 'mobile'
+                // strategy: 'mobile'
 
             },
         });
@@ -21,6 +21,8 @@ export class GoogleService {
         const response = await this.client.get('runPagespeed', {
             params: { url: website.href },
         });
+        // console.log(response.data)
+        // return response.data;
         let data = {
             title: response.data.title,
             response_code: response.data.responseCode,
